@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "resource": "^0.8.1",
+    "vue": "^2.6.7"
+  }
+}

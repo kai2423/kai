@@ -1,0 +1,63 @@
+<!d <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+   <meta title="简易计算器">
+    <script src="./lib/vue.js"></script>
+</head>
+<body>
+    <dir id="app">
+        <input type="text" v-model="n1">
+
+        <select v-model="opt">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <input type="text" v-model="n2">
+
+        <input type="button" value="=" v-on:click="jisuan">
+
+        <input type="text" v-model="result">
+    </dir>
+
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                n1:'0',
+                n2:'0',
+                opt:'-',
+                result:'0'
+
+            },
+            methods:{
+                jisuan(){
+                    // switch (this.opt) {
+                    //     case '+':
+                    //         this.result= parseInt(this.n1)+parseInt(this.n2)
+                    //         break;
+                    //     case '-':
+                    //         this.result=parseInt(this.n1)-parseInt(this.n2)
+                    //         break;
+                    //     case '*':
+                    //         thsi.result=parseInt(this.n1)*parseInt(this.n2)
+                    //         break;
+                    //     case '/':
+                    //         this.result=parseInt(this.n1)/parseInt(this.n2)
+                    //         break;
+                        
+                    // }
+
+                    var sss='parseInt(this.n1)'+this.opt+'parseInt(this.n2)'
+                    this.result=eval(sss)
+            
+                    
+                }
+            }
+        })
+    </script>
+</body>
+</html>
